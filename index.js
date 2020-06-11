@@ -35,7 +35,7 @@ return 16.2;
 }
 }
 };
-// console.log(cheapBurger(discount("Teacher"));
+//  console.log(cheapBurger(discount("Teacher"));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -73,14 +73,13 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
-function getReviewByIndex(name, rating, feedback) {
-//   for (let i = 0; i < reviews.length; i++){
-//     if (reviews[i].name === {name} && reviews[i].rating === {rating} && reviews[i].feedback === {feedback}){
-//   return `${this.name} gave the restaurant a ${rating} review and their feedback was: ${this.feedback}`;
-//     }
-// }
+function getReviewByIndex(reviews, index) {
+ 
+  return (`${reviews[index].name} gave the restaurant a ${reviews[index].rating} review and their feedback was: ${reviews[index].feedback}`);
+ 
+};
 
-// console.log(getReviewByindex('Daniela', 5));
+console.log(getReviewByIndex(reviews, 5));
 
 /* Task 8: Write a function to get information about the most recent review called `getLastReview`
 
@@ -92,12 +91,12 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the 
 restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(reviews, name, rating, feedback) {
-  reviews = `${name} gave the restaurant a ${rating}, and their feedback was ${feedback}`;
-  return reviews;
+function getLastReview(arr) {
+  return  `${arr[arr.length-1].name} gave the restaurant a ${arr[arr.length-1].rating}, and their feedback was ${arr[arr.length-1].feedback}`;
+ 
     
   } 
-  // console.log(getLastReview(reviews[5]));
+   console.log(getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -114,8 +113,8 @@ function getLastReview(reviews, name, rating, feedback) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating() {
+    
   }
 
   
@@ -160,4 +159,7 @@ function carMaker(/* code here */) {
   /* code here */
   
 }
+// 
+
+
 
