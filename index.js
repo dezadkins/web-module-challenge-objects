@@ -27,16 +27,16 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 const cheapBurger = {name: "Burger", 
 price: 18, 
 category: "Lunch",
-discount: function() {
-if (cheapBurger.discount === "Teacher" || cheapBurger.discount === "Student") {
-return 13.5;
-} else if  (cheapBurger.discount === "Public"); {
-return 16.2;
+discount: function(customer) {
+if (customer === "Teacher" || customer === "Student") {
+return this.price - (this.price * .25);
+} else if  (customer === "Public"); {
+return this.price - (this.price * .10);
 }
 }
 };
-//  console.log(cheapBurger(discount("Teacher"));
-
+console.log(cheapBurger.discount("Teacher", "Student"));
+console.log(cheapBurger.discount("Public"));
 
 ///////////////Reviews (MVP)///////////////////
 
